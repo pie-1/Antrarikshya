@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antariksha</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-title">Antariksha</div>
+      <div class="navbar-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/output">Outputs</a>
+        <a href="/graph">Graph</a>
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+      <h1>Near-Earth Objects (NEOs)</h1>
+      <div class="info-container">
+        <div class="info-text">
+          <h2>What are Near-Earth Objects?</h2>
+          <p>
+            Near-Earth Objects (NEOs) are asteroids or comets that come close to
+            Earth's orbit. They range in size from small rocks to large
+            celestial bodies that can pose significant threats to Earth. NASA
+            and other space organizations keep track of these objects to predict
+            any potential impacts.
+          </p>
+        </div>
+
+        <div class="info-images">
+          <img src="/static/asteroid1.jpg" alt="Asteroid" class="right-image" />
+          <img src="/static/comet1.jpg" alt="Comet" class="right-image" />
+        </div>
+      </div>
+
+      <div class="button-container">
+        <a href="{{ url_for('download') }}" class="btn">Download NEO Data</a>
+        <a href="{{ url_for('visualize') }}" class="btn">Visualize NEO Data</a>
+      </div>
+    </div>
+
+    <div class="footer">&copy; 2024 Antariksha. All Rights Reserved.</div>
+  </body>
+</html>
